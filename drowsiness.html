@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traffic Control Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 500px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid ;
+  width: 70%;
+  border-left: none;
+  height: 500px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Traffic Control Website</h1>
+  
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="file:///C:/Users/POOJA/Desktop/aaaaaa/index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="file:///C:/Users/POOJA/Desktop/aaaaaa/rules.html">TRAFFIC RULES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">DROWSINESS ALERT</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="file:///C:/Users/POOJA/Desktop/aaaaaa/URBAN.HTML">URBAN TRAFFIC CONTROL</a>
+      <li class="nav-item">
+        <a class="nav-link" href="file:///C:/Users/POOJA/Desktop/aaaaaa/PROCESS.HTML">IMAGE PROCESSING </a>
+      </li> 
+        <li class="nav-item">
+        <a class="nav-link" href="https://www.google.com/maps/@17.7820466,83.3710922,14z">GOOGLE MAPS</a>
+      </li>
+    </ul>
+  </div>  
+</nav>
+
+
+
+<div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, 'London')">INTRODUCTION</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Paris')">METHODOLOGY</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Tokyo')">IMPLEMENTATION</button>
+     
+</div>
+
+<div id="London" class="tabcontent">
+  <h3><Center>INTRODUCTION</Center></h3>
+  <p>This represents a real-time driver drowsiness detection system for driving safety. Based on computer vision techniques , the driver’s face is located from a color video captured in a car. Then, face detection is employed to locate the regions of the driver’s eyes, which are used as the templates for eye tracking in subsequent frames. Finally, the tracked eye’s images are used for drowsiness detection in order to generate warning alarms. The proposed approach has three phases: Face, Eye detection and drowsiness detection. The role of image processing is to recognize the face of the driver and then extracts the image of the eyes of the driver for detection of drowsiness. The Haar face detection algorithm takes captured frames of image as input and then the detected face as output. Next, CHT is used to tracking eyes from the detected face. If the eyes are closed for a predefined period of time the eyes of the driver will be considered closed and hence an alarm will be started to alert the driver. The proposed system was tested on a Raspberry pi 3 Model B with 1GB RAM with use of Logitech HD Webcam C270. The experimental results appears quite encouraging and promising. The system could reach more than 15 frames per second for face and eye tracking, and the average correct rate for eye location and tracking could achieve 99.0% on some test videos. Thus, it can be concluded that the proposed approach is a low cost and effective solution method for a real-time of driver drowsiness detection.<br>
+    
+    The medical reason for drowsiness is also different.
+The drowsiness of a car driver depends on the secretions in
+the body. The body secretions also affect the activities of a
+person. There are two types of activities in our body namely
+sympathetic and parasympathetic. Sympathetic activities are
+controlled by adrenalin secretion. And parasympathetic
+activities are controlled by acetylcholine secretion..</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3><Center>METHODOLOGY</Center></h3>
+  <p>There are different methodologies developed for detecting
+the driver drowsiness and also preventing the road
+accidents.<br>
+(A) Vehicle based approach-It is one of the techniques
+to find out driver drowsiness. The technique continuously
+monitored position of lane, steering wheel position and
+pressure on acceleration pedal. If it crosses the threshold
+values then it indicate that the driver gets drowsy.<br>
+(B)Physiological based approach-In this technique, we
+continuously observed pulse rate, heart rate and brain
+activity information. ECG is used to calculate the variation in
+heart rate and also detect different conditions for
+drowsiness. EEG is used to calculate the different electrical
+activities of brain. In order to determine the brain activities,
+electrodes are placed around the scalp of the car driver.
+These electrodes detect the voltages produced in the brain
+cortex. This voltages contain three frequencies related to
+alpha , beta and gamma waves. These frequencies can be
+further processed to calculate drowsiness and different sleep
+stages.<br>
+(C)Behavioral based approach-This approach includes
+yawning (opening area of mouth), eye closure, eye blinking
+frequency and head pose. This can be done by placing
+camera in front of the car driver. The camera continuously
+captures images of the car driver. The car driver’s image is
+further processed for detecting drowsiness of the driver.</p> 
+</div>
+    
+
+<div id="Tokyo" class="tabcontent">
+  <h3><Center>IMPLEMENTATION</Center></h3>
+  <p>Practically, Physiological based approach is not suitable for
+drowsiness detection. It is unsafe for driver and
+environmental conditions also affected the electrode. Also
+Vehicle based approach is not suitable. Because vehicle
+based approach is based on monitoring the driving pattern
+of the car. But the problem is, it is difficult to determine
+when the driver is in micro sleep or in a deep sleep? This
+situation is dangerous for the driver and also car. Hence we
+are using Behavioral based approach in our project.
+Due to secretion of adrenalin and acetylcholine, the
+area of opening eye changes. Basically, our eye movements
+are controlled by six muscles namely superior rectus,
+inferior rectus, lateral rectus, medial rectus, superior oblique
+and inferior oblique. And this six muscles activity is
+controlled by the nerve. Due to the movements of these
+muscles, pupil part of eye is dilated or constricted and iris
+part of eye is also constricted or dilated. In order to monitor
+the eye movements along with the iris and pupil area, we
+have to use a camera for capturing the real time images of
+eye.<br>
+    
+    Our proposed system consists of open source 5
+megapixel digital camera for capturing real time images of
+car driver. For further processing on that image, we need to
+send the image to Raspberry-pi system board. The
+Raspberry-pi system is loaded with Raspbian OS and Python
+packages for Open CV (Computer Vision). Haar features are
+used to calculate required part of the eye (pupil and iris).
+Further, Hough transform is used for edge detection of pupil
+and iris. Pupil and Iris area is calculated and then it
+compares with threshold value. If it exceeds the threshold
+value then driver drowsiness condition is detected and
+alarm indicated by buzzer. Buzzer is directly connected to
+PIC 16F controller and the PIC controller is serially
+interfaced with Raspberry-pi system board.
+</p>
+</div>
+
+    
+
+    
+   
+<div class="clearfix"></div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
